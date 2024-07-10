@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import '../styles.css';  // Import styles
+import '../styles.css';  
 
 const TaskItem = ({ task, updateTask, deleteTask }) => {
+    //Este isEditing nos permite hacer una renderización condicional
+    //Sí se encuentra en true esto permite que el usuario pueda editar el task y enviarlo al api
     const [isEditing, setIsEditing] = useState(false);
     const [title, setTitle] = useState(task.title);
     const [description, setDescription] = useState(task.description);
@@ -14,6 +16,7 @@ const TaskItem = ({ task, updateTask, deleteTask }) => {
 
     return (
         <div className="task-card">
+            
             {isEditing ? (
                 <div className="edit-mode">
                     <input

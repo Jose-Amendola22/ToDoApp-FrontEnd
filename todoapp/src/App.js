@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import TaskForm from './components/TaskForm';
 import TaskList from './components/TaskList';
-import './styles.css';  // Import styles
+import './styles.css';  
 
 const App = () => {
+    //Esto son los estados que se usarn para casi toda la app
     const [tasks, setTasks] = useState([]);
 
+    //Esta función hace un simple get a la api y lo que obtiene lo guarda en la variable de tasks
     const fetchTasks = async () => {
         try {
             const response = await fetch('http://localhost:8888/tasks');
@@ -19,6 +21,7 @@ const App = () => {
         }
     };
 
+    //La función hace una llamada a la api y agrega el task
     const addTask = async (newTask) => {
       try {
           const response = await fetch('http://localhost:8888/tasks', {
@@ -37,6 +40,7 @@ const App = () => {
       }
   };
 
+    //Función para actulizar algún task conforme a su edit
     const updateTask = async (id, updatedTask) => {
         try {
             const response = await fetch(`http://localhost:8888/tasks/${id}`, {
@@ -49,13 +53,14 @@ const App = () => {
             if (!response.ok) {
                 throw new Error('Failed to update task');
             }
-            // Fetch tasks again after successful PUT to update the list
+            
             fetchTasks();
         } catch (error) {
             console.error('Error updating task:', error);
         }
     };
 
+    //función para borrar un task con su id
     const deleteTask = async (id) => {
         try {
             const response = await fetch(`http://localhost:8888/tasks/${id}`, {
@@ -64,18 +69,20 @@ const App = () => {
             if (!response.ok) {
                 throw new Error('Failed to delete task');
             }
-            // Fetch tasks again after successful DELETE to update the list
+           
             fetchTasks();
         } catch (error) {
             console.error('Error deleting task:', error);
         }
     };
 
+    //a penas se carga la app se hace un get a la api para conseguir los tasks
     useEffect(() => {
       fetchTasks();
   }, []);
 
     return (
+        //un simple contenedor para que el form este a la izquierda y los tasks a la derecha
         <div className="app-container">
             <div className="task-form-container">
                 <TaskForm addTask={addTask} />

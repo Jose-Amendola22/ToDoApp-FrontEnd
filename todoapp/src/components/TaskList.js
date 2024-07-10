@@ -3,6 +3,7 @@ import TaskItem from './TaskItem';
 import '../styles.css';
 
 const TaskList = ({ tasks, updateTask, deleteTask }) => {
+    //simple lista de tasks que usa el get de el app para mapearse
     return (
         <div className="container">
             <h1>Task List</h1>

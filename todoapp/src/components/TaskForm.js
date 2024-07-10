@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
-import '../styles.css';  // Import styles
+import '../styles.css';  
 
 const TaskForm = ({ addTask }) => {
+    //Las variables que se le enviarán a la api y sus estados
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [completed, setCompleted] = useState(false);
 
+    //sí se aprieta el botón de submit se envía los datos del form a la api
     const handleSubmit = (e) => {
         e.preventDefault();
         addTask({ title, description, completed });
+        //una vez enviados se cambia el form a su estado original
         setTitle('');
         setDescription('');
         setCompleted(false);
