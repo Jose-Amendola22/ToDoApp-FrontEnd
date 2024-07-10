@@ -1,0 +1,259 @@
+.app-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+/* Task form container styles */
+.task-form-container {
+    width: 40%; /* Adjust width as needed */
+}
+
+/* Task list container styles */
+.task-list-container {
+    width: 55%; /* Adjust width as needed */
+    border-left: 1px solid #ddd; /* Optional: Add a border between form and list */
+    padding-left: 20px; /* Optional: Add padding for separation */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-item {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-item .title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.task-item .description {
+    color: #666;
+}
+
+.task-form {
+    margin-bottom: 20px;
+}
+
+.task-form input[type="text"], 
+.task-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.task-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.task-form button:hover {
+    background-color: #0056b3;
+}
+
+.task-item {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-item .edit-mode {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-item .edit-input,
+.task-item .edit-textarea,
+.task-item .edit-checkbox {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.task-item .view-mode {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-item h2 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.task-item p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.task-item .edit-button,
+.task-item .delete-button {
+    padding: 8px 16px;
+    margin-right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.task-item .edit-button:hover,
+.task-item .delete-button:hover {
+    background-color: #0056b3;
+}
+
+.task-form {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.task-form h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.task-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-form input[type="text"],
+.task-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.task-form label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.task-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.task-form button:hover {
+    background-color: #0056b3;
+}
+
+
+.task-card {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.task-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.task-card .edit-mode {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-card .edit-input,
+.task-card .edit-textarea,
+.task-card .edit-checkbox {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.task-card .view-mode {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-card h2 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.task-card p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.task-card .button-container {
+    margin-top: 10px;
+}
+
+.task-card .edit-button,
+.task-card .delete-button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.task-card .edit-button:hover,
+.task-card .delete-button:hover {
+    background-color: #0056b3;
+}
